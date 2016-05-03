@@ -10,9 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var animatedImage: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let frameData = FrameLoader.loadFrames()
+        var frames = [UIImage]()
+        for (_, frame) in frameData.enumerate() {
+            let image:UIImage = UIImage(data: frame)!
+            frames.append(image)
+        }
+        // this works fine (1 frame per second)
+        self.animatedImage.animationImages = frames
+        self.animatedImage.animationDuration = 6
+        self.animatedImage.startAnimating()
     }
 
     override func didReceiveMemoryWarning() {

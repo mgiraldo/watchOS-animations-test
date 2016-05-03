@@ -27,6 +27,7 @@
 		CC5268B81CD814F700B8BAF1 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = CC5268B21CD814F700B8BAF1 /* 5.png */; };
 		CC5268B91CD814F700B8BAF1 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = CC5268B31CD814F700B8BAF1 /* 6.png */; };
 		CC5268BB1CD815C100B8BAF1 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5268BA1CD815C100B8BAF1 /* WatchConnectivity.framework */; };
+		CCE50C2D1CD8394400C4BAD3 /* FrameLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE50C2C1CD8394400C4BAD3 /* FrameLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		CC5268B21CD814F700B8BAF1 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		CC5268B31CD814F700B8BAF1 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
 		CC5268BA1CD815C100B8BAF1 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		CCE50C2C1CD8394400C4BAD3 /* FrameLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				CC5268AD1CD814F700B8BAF1 /* frames */,
 				CC5268721CD813F600B8BAF1 /* AppDelegate.swift */,
 				CC5268741CD813F600B8BAF1 /* ViewController.swift */,
+				CCE50C2C1CD8394400C4BAD3 /* FrameLoader.swift */,
 				CC5268761CD813F600B8BAF1 /* Main.storyboard */,
 				CC5268791CD813F600B8BAF1 /* Assets.xcassets */,
 				CC52687B1CD813F600B8BAF1 /* LaunchScreen.storyboard */,
@@ -337,6 +340,7 @@
 			files = (
 				CC5268751CD813F600B8BAF1 /* ViewController.swift in Sources */,
 				CC5268731CD813F600B8BAF1 /* AppDelegate.swift in Sources */,
+				CCE50C2D1CD8394400C4BAD3 /* FrameLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +485,7 @@
 		CC5268A31CD813F700B8BAF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "watchSample WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mySamples.watchSample.watchkitapp.watchkitextension;
@@ -495,6 +500,7 @@
 		CC5268A41CD813F700B8BAF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "watchSample WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mySamples.watchSample.watchkitapp.watchkitextension;
@@ -542,6 +548,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = watchSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mySamples.watchSample;
@@ -554,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = watchSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mySamples.watchSample;
@@ -581,6 +589,7 @@
 				CC5268A41CD813F700B8BAF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC5268A61CD813F700B8BAF1 /* Build configuration list for PBXNativeTarget "watchSample WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -589,6 +598,7 @@
 				CC5268A81CD813F700B8BAF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC5268AA1CD813F700B8BAF1 /* Build configuration list for PBXNativeTarget "watchSample" */ = {
 			isa = XCConfigurationList;
@@ -597,6 +607,7 @@
 				CC5268AC1CD813F700B8BAF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

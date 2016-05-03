@@ -31,8 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-
-
 }
 
 extension AppDelegate: WCSessionDelegate {
@@ -41,20 +39,7 @@ extension AppDelegate: WCSessionDelegate {
         print(message)
         if let reference = message["hello"] as? String {
             print(reference)
-            let bundle = NSBundle.mainBundle()
-            let frame1 = NSData(contentsOfFile: bundle.pathForResource("1", ofType: "png")!)
-            let frame2 = NSData(contentsOfFile: bundle.pathForResource("2", ofType: "png")!)
-            let frame3 = NSData(contentsOfFile: bundle.pathForResource("3", ofType: "png")!)
-            let frame4 = NSData(contentsOfFile: bundle.pathForResource("4", ofType: "png")!)
-            let frame5 = NSData(contentsOfFile: bundle.pathForResource("5", ofType: "png")!)
-            let frame6 = NSData(contentsOfFile: bundle.pathForResource("6", ofType: "png")!)
-            var frames = [NSData]()
-            frames.append(frame1!)
-            frames.append(frame2!)
-            frames.append(frame3!)
-            frames.append(frame4!)
-            frames.append(frame5!)
-            frames.append(frame6!)
+            let frames = FrameLoader.loadFrames()
             print(frames)
             replyHandler(["frames": frames])
         }
